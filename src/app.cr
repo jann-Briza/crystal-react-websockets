@@ -5,10 +5,6 @@ sockets = [] of HTTP::WebSocket
 
 public_folder "src/assets"
 
-get "/" do
-  render "src/views/index.ecr"
-end
-
 ws "/" do |socket|
   sockets.push socket
 

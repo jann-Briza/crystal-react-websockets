@@ -1,13 +1,11 @@
 name: crystal-react-websockets
 version: 0.1.0
 
+dependencies:
+  kemal:
+    github: sdogruyol/kemal
+
 authors:
   - jann anthony briza <jann.briza@shoresuite.com>
-
-targets:
-  crystal-react-websockets:
-    main: src/crystal-react-websockets.cr
-
-crystal: 0.23.1
 
 license: MIT

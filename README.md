@@ -3,8 +3,8 @@
 Crystal lang with websokets and react framework
 
 ## Installation
-Install Crystal in your server.
-Clone repository
+Install Crystal in your server. then
+clone this repository
 ```
     git clone https://github.com/briza23/crystal-react-websockets.git
 ```

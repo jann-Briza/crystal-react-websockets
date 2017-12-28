@@ -23,7 +23,7 @@ Run the repository:
 
 ## Usage
 
-A chat application using crystal and React for frondtend.
+A chat application using crystal and React for frontend framework.
 
 ## Contributing
 

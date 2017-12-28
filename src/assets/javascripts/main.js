@@ -40,11 +40,11 @@ function random(min, max) {
       };
 
       server.onopen = function () {
-        server.send(user + ": joined the room.");
+        // server.send(user + ": joined the room.");
       };
 
       server.onclose = function () {
-        server.send(user + ": left the room.");
+        // server.send(user + ": left the room.");
       };
 
       this.server = server;
@@ -60,7 +60,12 @@ function random(min, max) {
       setTimeout(function () {
         self.sendable = true;
       }, 100);
-      this.server.send(this.user + ":" + this.refs.message.value);
+      let data = new Object();
+      data.user = this.user;
+      data.message = this.refs.message.value;
+      this.server.send(
+        JSON.stringify(data)
+      );
       this.refs.message.value = '';
       this.sendable = false;
     },

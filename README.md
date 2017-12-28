@@ -3,8 +3,8 @@
 Crystal lang with websokets and react framework
 
 ## Installation
-
-TODO: Clone repository
+Install Crystal in your server.
+Clone repository
 ```
     git clone https://github.com/briza23/crystal-react-websockets.git
 ```
@@ -16,9 +16,19 @@ Install shards:
 ```
     shards install
 ```
-Run the repository:
+Run the server:
 ```
     crystal run src/app.cr
+```
+the server will run at port `3000`
+After running the server run the frontend by creating a new terminal `ctrl + shift + t`.
+Go to the frontend path
+```
+    cd src/javascripts/chat-frontend
+```
+Then run the npm
+```
+npm start or yarn start
 ```
 
 ## Usage

@@ -1,6 +1,6 @@
 # crystal-react-websockets
 
-Crystal lang with websokets and react framework
+A simple chat appication created using Crystal lang, websockets, and kemal for the http framework fot the server. And for the frontend it is created using React + Redux and node for the server
 
 ## Installation
 Install Crystal in your server. then
@@ -30,10 +30,10 @@ Then run the npm
 ```
 npm start or yarn start
 ```
-
+THe frontend will run at port `3001`
 ## Usage
 
-A chat application using crystal and React for frontend framework.
+A simple chat application using Crystal for the server and React for frontend framework.
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 # crystal-react-websockets
 
-TODO: Crystal lang with websokets and react framework
+Crystal lang with websokets and react framework
 
 ## Installation
 
@@ -23,7 +23,7 @@ Run the repository:
 
 ## Usage
 
-TODO: A chat application using crystal and React for frondtend.
+A chat application using crystal and React for frondtend.
 
 ## Contributing
 

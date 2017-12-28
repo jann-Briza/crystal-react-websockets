@@ -6,54 +6,42 @@ import React from "react";
 const server = new WebSocket("ws://" + "localhost" + ":" + "3000"); //the server of your websockets
 
 class Chat extends React.Component {
-    componentWillMount(){
-        this.setState({
-            message: '',
-            messages: []
-        });
-    }
 
     componentDidMount(){
         let self = this;
+        var user = localStorage.getItem('user') || prompt("Enter your name").replace(/\:|\@/g, ""); //propmt will popup and get the user name
+        localStorage.setItem('user', user); //store the user in session o local storage
         server.onmessage = function (event) {
-            let data = JSON.parse(event.data);
-            self.setState({
-                messages: data
-            });
+            let data = JSON.parse(event.data); //parse the array
+            self.props.handleGetMessage(data); //recieve the data from server
         };
     }
 
-    message_change(event){
-        this.setState({
-            message: event.target.value
-        });
-    }
-
-    message_send(e){
+    send_message(e){
         if (e.key === "Enter") { //Check if the Enter is pressed
             let data = new Object();
-            data.user = "test";
-            data.message = this.state.message;
+            data.user = localStorage.getItem('user');
+            data.message = this.props.message;
+            data.time =  new Date();
             server.send(
               JSON.stringify(data)
             );
             //clear the message after sending
-            this.setState({
-                message: ''
-            });
+            this.props.clearMessage();
         }
     }
+
     render() {
-        let messages = this.state.messages.map(data=>{
-            let message = JSON.parse(data)
-            return (<li>{message.message}</li>)
+        let messages = this.props.messages.map((data, i)=>{
+            let message = JSON.parse(data) //parse object
+            return (<li key={i}>{"[" + message.time + "]"} <strong>{message.user}</strong><span>: {message.message} </span></li>)
         });
         return (
             <div>
                 <ul>
                     {messages}
                 </ul>
-                <input value={this.state.message} placeholder="Enter message" onKeyPress={this.message_send.bind(this)} onChange={this.message_change.bind(this)}/>
+                <input value={this.props.message} placeholder="Enter message" onKeyPress={this.send_message.bind(this)} onChange={this.props.handleChangeMessage.bind(this)}/>
             </div>
         );
     }

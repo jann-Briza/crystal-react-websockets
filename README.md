@@ -15,7 +15,7 @@ TODO: A chat application using crystal and React for frondtend.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/crystal-react-websockets/fork )
+1. Fork it ( https://github.com/briza23/crystal-react-websockets/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)

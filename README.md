@@ -4,10 +4,22 @@ TODO: Crystal lang with websokets and react framework
 
 ## Installation
 
-TODO: Clone repository     `git clone https://github.com/briza23/crystal-react-websockets.git`
-Go to the repository: `cd crystal-react-websockets`
-Install shards:       `shards install`
-Run the repository:   `crystal run src/app.cr`
+TODO: Clone repository
+```
+    git clone https://github.com/briza23/crystal-react-websockets.git
+```
+Go to the repository:
+```
+    cd crystal-react-websockets
+```
+Install shards:
+```
+    shards install
+```
+Run the repository:
+```
+    crystal run src/app.cr
+```
 
 ## Usage
 

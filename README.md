@@ -7,7 +7,7 @@ TODO: Crystal lang with websokets and react framework
 TODO: Clone repository     `git clone https://github.com/briza23/crystal-react-websockets.git`
       Go to the repository `cd crystal-react-websockets`
       Install shards       `shards install`
-      Run the repository   `crystal run crystal-react-websockets.cr` 
+      Run the repository   `crystal run crystal-react-websockets.cr`
 
 ## Usage
 
@@ -23,4 +23,4 @@ TODO: A chat application using crystal and React for frondtend.
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) jann anthony briza - creator, maintainer
+- [[briza23]](https://github.com/[briza23]) jann anthony briza - creator, maintainer
